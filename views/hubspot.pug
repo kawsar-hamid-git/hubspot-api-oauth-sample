@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title 
+    span  Connected
+  p Welcome to #{title}
+  table.contact-list
+    caption Contact List
+    thead
+        tr
+            th Id
+            th Name
+            th Email
+    tbody
+        each item in contacts
+            tr
+                td #{item.id}
+                td 
+                    span #{item.properties.firstname}
+                    span  #{item.properties.lastname}
+                td #{item.properties.email}
